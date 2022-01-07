@@ -27,6 +27,9 @@ h3 {
 .grid div {
   width: 20px;
   height: 20px;
+}
+
+.tetromino {
   background-color: blue;
 }
 /*# sourceMappingURL=style.css.map */
