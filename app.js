@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       //start a new tetromino falling
       random = Math.floor(Math.random() * theTetrominoes.length);
-      current = theTetrominoes[random][currentPosition];
+      current = theTetrominoes[random][currentRotation];
       currentPosition = 4;
       draw();
     }
