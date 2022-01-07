@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     undraw();
     currentPosition += width;
     draw();
+    freeze();
   }
 
   //freeze function
@@ -89,6 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
       current.forEach((index) =>
         squares[currentPosition + index].classList.add("taken")
       );
+      //start a new tetromino falling
+      random = Math.floor(Math.random() * theTetrominoes.length);
+      current = theTetrominoes[random][currentPosition];
+      currentPosition = 4;
+      draw();
     }
   }
 });
