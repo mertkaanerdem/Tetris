@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
       draw();
       displayShape();
       addScore();
+      gameOver();
     }
   }
   //https://keycode.info/
@@ -238,6 +239,18 @@ document.addEventListener("DOMContentLoaded", () => {
         squares = squaresRemoved.concat(squares);
         squares.forEach((cell) => grid.appendChild(cell));
       }
+    }
+  }
+
+  //game over
+  function gameOver() {
+    if (
+      current.some((index) =>
+        squares[currentPosition + index].classList.contains("taken")
+      )
+    ) {
+      ScoreDisplay.innerHTML = "<h3>Game Over!</h3> Your score is : " + score;
+      clearInterval(timerId);
     }
   }
 });
