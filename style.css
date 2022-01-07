@@ -13,7 +13,13 @@ h3 {
   font-size: 22px;
 }
 
-.grid {
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .grid {
   width: 200px;
   height: 400px;
   display: -webkit-box;
@@ -24,12 +30,29 @@ h3 {
   background-color: yellow;
 }
 
-.grid div {
+.container .grid div {
   width: 20px;
   height: 20px;
 }
 
-.tetromino {
+.container .tetromino {
   background-color: blue;
+}
+
+.container .mini-grid {
+  margin-left: 30px;
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: yellow;
+}
+
+.container .mini-grid div {
+  height: 20px;
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */
