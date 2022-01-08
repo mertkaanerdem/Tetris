@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;900&display=swap");
 body {
   padding: 0;
   margin: 0;
@@ -6,11 +6,35 @@ body {
           box-sizing: border-box;
   list-style: none;
   font-family: "Poppins", sans-serif;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(0%, #dbffaf), to(#c2f5ff));
+  background: linear-gradient(90deg, #020024 0%, #dbffaf 0%, #c2f5ff 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  font-weight: 100;
 }
 
 h3 {
   font-weight: 600;
   font-size: 22px;
+}
+
+h3 #score {
+  font-weight: 200;
 }
 
 .container {
@@ -27,7 +51,9 @@ h3 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: yellow;
+  -webkit-box-shadow: inset 0 0 2px #002663;
+          box-shadow: inset 0 0 2px #002663;
+  border-radius: 2px;
 }
 
 .container .grid div {
@@ -37,10 +63,29 @@ h3 {
 
 .container .tetromino {
   background-color: blue;
+  -webkit-box-shadow: inset 0 0 1px #eee;
+          box-shadow: inset 0 0 1px #eee;
+  border-radius: 1px;
 }
 
-.container .mini-grid {
+.container aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 30px;
+  padding: 30px;
+  gap: 20px;
+  border-radius: 2px;
+  background-color: #b3dcff;
+  -webkit-box-shadow: inset 0 0 3px #002663;
+          box-shadow: inset 0 0 3px #002663;
+}
+
+.container aside .mini-grid {
   width: 80px;
   height: 80px;
   display: -webkit-box;
@@ -48,10 +93,11 @@ h3 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: yellow;
+  -webkit-box-shadow: inset 0 0 2px #002663;
+          box-shadow: inset 0 0 2px #002663;
 }
 
-.container .mini-grid div {
+.container aside .mini-grid div {
   height: 20px;
   width: 20px;
 }
