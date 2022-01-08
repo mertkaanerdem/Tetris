@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let squares = Array.from(document.querySelectorAll(".grid div"));
   const ScoreDisplay = document.querySelector("#score");
   const StartButton = document.querySelector("#start-button");
+  const ScoreTitle = document.querySelector(".score");
   const width = 10;
   let nextRandom = 0;
   let timerId;
@@ -256,6 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
         squares[currentPosition + index].classList.contains("taken")
       )
     ) {
+      ScoreTitle.innerHTML = "";
       ScoreDisplay.innerHTML = "<h3>Game Over!</h3> Your score is : " + score;
       clearInterval(timerId);
     }
