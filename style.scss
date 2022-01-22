@@ -36,14 +36,13 @@ h3 {
   font-weight: 600;
   font-size: 22px;
   padding: 20px;
-  box-shadow: inset 0 0 5px 0.5px rgba(255, 120, 120, 0.5);
+  // box-shadow: inset 0 0 5px 0.5px rgba(255, 120, 120, 0.5);
   @media screen and (max-width: $small) {
     display: none;
   }
   #score {
     font-weight: 200;
     color: white;
-    background-color: red;
     padding: 10px;
   }
 }
@@ -58,8 +57,7 @@ h3 {
     height: 400px;
     display: flex;
     flex-wrap: wrap;
-    // background-color: yellow;
-    // box-shadow:inset 0 0 2px #002663;
+
     border-radius: 5px;
     box-shadow: 0 0 10px 2px rgba(0, 38, 99, 0.6);
     div {
